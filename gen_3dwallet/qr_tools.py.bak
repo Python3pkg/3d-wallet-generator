@@ -20,10 +20,10 @@ def getQRArray(text, errorCorrection):
 	for line in plainOut:
 		thisOut = []
 		for char in line:
-			if char == '7':
+			if char == u'7':
 				# This is white
 				thisOut.append(1)
-			elif char == '4':
+			elif char == u'4':
 				# This is black, it's part of the u'49'
 				thisOut.append(0)
 		# Finally add everything to the output, stipping whitespaces at start and end

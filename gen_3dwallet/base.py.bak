@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
 try:
-    from . import qr_tools as qrTools # Module for this project
+    import qr_tools as qrTools # Module for this project
 except:
     import gen_3dwallet.qr_tools as qrTools
     
 try:
-    from . import TextGenerator as textGen # Module for this project
+    import TextGenerator as textGen # Module for this project
 except:
     import gen_3dwallet.TextGenerator as textGen
 
@@ -327,7 +327,7 @@ def main():
             scadOutFile.close()
 
         # Log some info
-        print(("Status: Done generating data for wallet #" + str(filenameCounter) + "...Starting generating STL file"))
+        print("Status: Done generating data for wallet #" + str(filenameCounter) + "...Starting generating STL file")
 
         if args.outputSTLFolder:
             try:
@@ -352,7 +352,7 @@ def main():
         PAOut.append(data["wif"] + "," + data["address"])
 
         # Print some more stats
-        print(("Status: Done generating STL file (" + str(round(filenameCounter/args.copies*100)) + "% done)"))
+        print("Status: Done generating STL file (" + str(round(filenameCounter/args.copies*100)) + "% done)")
 
         filenameCounter += 1
 
